@@ -5,7 +5,7 @@ public class DaysInMonth {
         if (isLeapYear(year) && month == 2) {
             System.out.println(29);
         } else {
-            amountOfDays(month);
+            amountOfDays(month, year);
         }
     }
 
@@ -20,7 +20,7 @@ public class DaysInMonth {
         }
     }
 
-    private void amountOfDays(int month) {
+    private void amountOfDays(int month, int year) {
         if (month < 1 || month > 12) {
             System.out.println("wrong number!");
         }
@@ -29,7 +29,9 @@ public class DaysInMonth {
             System.out.println(28);
         }
 
-        if (month == 2 && isLeapYear();)
+        if (month == 2 && isLeapYear(year)) {
+            System.out.println(29);
+        }
 
         if (((month >= 1 && month <= 7) && month % 2 != 0) ||
                 (month >= 8 && month <= 12) && month % 2 == 0) {
